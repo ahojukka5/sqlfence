@@ -85,4 +85,4 @@ uv run pytest
 uv build
 ```
 
-See the full documentation and [CHANGELOG.md](CHANGELOG.md) for details.
+See the [full documentation](docs/index.md) and [CHANGELOG.md](CHANGELOG.md) for details.

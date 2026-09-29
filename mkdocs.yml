@@ -1,6 +1,5 @@
 site_name: sqlfence
 site_description: Execute SQL examples embedded in Markdown.
-site_url: https://sqlfence.readthedocs.io/
 repo_url: https://github.com/ahojukka5/sqlfence
 repo_name: ahojukka5/sqlfence
 strict: true
