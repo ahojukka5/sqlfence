@@ -41,3 +41,14 @@ def test_cli_in_place_is_idempotent(tmp_path: Path) -> None:
     once = source.read_text(encoding="utf-8")
     assert main([str(source), "--in-place"]) == 0
     assert source.read_text(encoding="utf-8") == once
+
+
+def test_inplace_temp_name_is_gitignored() -> None:
+    from fnmatch import fnmatch
+
+    source = Path("notes.md")
+    temporary = source.with_suffix(source.suffix + ".sqlfence.tmp")
+    patterns = (
+        Path(__file__).resolve().parents[1].joinpath(".gitignore").read_text(encoding="utf-8")
+    ).splitlines()
+    assert any(fnmatch(temporary.name, pattern) for pattern in patterns if pattern)
