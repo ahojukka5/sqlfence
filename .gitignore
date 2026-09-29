@@ -11,4 +11,4 @@ htmlcov/
 build/
 dist/
 site/
-*.enkeksi.tmp
+*.sqlfence.tmp
