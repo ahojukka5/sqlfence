@@ -31,7 +31,7 @@ duckdb = ["duckdb>=1.0"]
 
 [project.urls]
 Homepage = "https://github.com/ahojukka5/sqlfence"
-Documentation = "https://sqlfence.readthedocs.io/"
+Documentation = "https://github.com/ahojukka5/sqlfence/tree/master/docs"
 Repository = "https://github.com/ahojukka5/sqlfence"
 Issues = "https://github.com/ahojukka5/sqlfence/issues"
 Changelog = "https://github.com/ahojukka5/sqlfence/blob/master/CHANGELOG.md"
