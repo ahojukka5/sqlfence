@@ -6,7 +6,8 @@ All notable changes are documented here. The project follows Semantic Versioning
 
 ### Added
 
-- Published under the `sqlfence` distribution, import package, and CLI name.
+- Named the distribution, import package, and CLI `sqlfence`. The 1.0.0
+  GitHub release is not on PyPI.
 - Robust CommonMark parsing using `markdown-it-py`.
 - Idempotent generated-output regions for safe in-place rendering.
 - SQLite support with read-only file databases by default.

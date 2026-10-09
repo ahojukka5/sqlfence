@@ -1,5 +1,9 @@
 # Releasing
 
+`v1.0.0` is a GitHub release. PyPI has no `sqlfence` project, and
+`publish.yml` has not uploaded a distribution. Until that upload, install
+from git as in [Getting started](getting-started.md).
+
 ## One-time PyPI setup
 
 Before the first upload, configure a pending GitHub Actions Trusted Publisher

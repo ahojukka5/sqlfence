@@ -1,8 +1,6 @@
 # sqlfence
 
 [![CI](https://github.com/ahojukka5/sqlfence/actions/workflows/ci.yml/badge.svg)](https://github.com/ahojukka5/sqlfence/actions/workflows/ci.yml)
-[![PyPI](https://img.shields.io/pypi/v/sqlfence.svg)](https://pypi.org/project/sqlfence/)
-[![Python](https://img.shields.io/pypi/pyversions/sqlfence.svg)](https://pypi.org/project/sqlfence/)
 
 **Executable SQL examples for ordinary Markdown files.**
 
@@ -13,14 +11,17 @@ than a notebook system: Markdown goes in and Markdown comes out.
 ## Install
 
 ```console
-uv tool install sqlfence
+uv tool install git+https://github.com/ahojukka5/sqlfence
 ```
 
 DuckDB support is optional:
 
 ```console
-uv tool install 'sqlfence[duckdb]'
+uv tool install 'sqlfence[duckdb] @ git+https://github.com/ahojukka5/sqlfence'
 ```
+
+The 1.0.0 tag is not on PyPI yet. `publish.yml` uploads after a Trusted
+Publisher exists for this repository.
 
 ## Example
 

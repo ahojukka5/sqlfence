@@ -3,20 +3,23 @@
 ## Installation
 
 ```console
-uv tool install sqlfence
+uv tool install git+https://github.com/ahojukka5/sqlfence
 ```
 
 For a project dependency:
 
 ```console
-uv add --dev sqlfence
+uv add --dev 'sqlfence @ git+https://github.com/ahojukka5/sqlfence'
 ```
 
 DuckDB support is available through the optional extra:
 
 ```console
-uv add 'sqlfence[duckdb]'
+uv add 'sqlfence[duckdb] @ git+https://github.com/ahojukka5/sqlfence'
 ```
+
+These git URLs are the install path until the first PyPI upload. See
+[Releasing](releasing.md).
 
 ## Render a document
 
