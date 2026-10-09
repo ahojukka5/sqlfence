@@ -31,3 +31,16 @@ jobs:
       - run: uv build
       - if: matrix.python-version == '3.14'
         run: uv run --group docs mkdocs build --strict
+
+  duckdb:
+    if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v7
+      - name: Install uv
+        uses: astral-sh/setup-uv@08807647e7069bb48b6ef5acd8ec9567f424441b # v8.1.0
+        with:
+          python-version: "3.12"
+          enable-cache: true
+      - run: uv sync --all-groups --extra duckdb
+      - run: uv run pytest

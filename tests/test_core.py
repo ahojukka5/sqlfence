@@ -163,6 +163,14 @@ def test_unsupported_engine() -> None:
         render_markdown("text", RenderOptions(engine="other"))
 
 
+def test_duckdb_renders_query() -> None:
+    pytest.importorskip("duckdb")
+    source = "```sql\nSELECT 7 AS value;\n```\n"
+    rendered = render_markdown(source, RenderOptions(engine="duckdb"))
+    assert "|   value |" in rendered
+    assert "|       7 |" in rendered
+
+
 def test_unlabelled_fence_is_ignored() -> None:
     source = "```\nplain text\n```\n"
     assert render_markdown(source) == source
