@@ -4,7 +4,7 @@ The project and distribution are now named `sqlfence`. Install the new package
 and use the new command and import path:
 
 ```console
-uv tool install sqlfence
+uv tool install git+https://github.com/ahojukka5/sqlfence
 sqlfence input.md --output output.md
 ```
 
